@@ -6,6 +6,7 @@ import csv
 import json
 # from langchain.document_loaders import TextLoader
 from langchain_community.document_loaders import TextLoader
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 def csv_to_json(csv_file_path, json_file_path):
     # Function to convert a CSV file to a JSON file
@@ -31,4 +32,11 @@ if __name__ == "__main__":
     loader = TextLoader(json_file_path, encoding='UTF-8')
     documents = loader.load()
 
+    # Split the loaded documents using RecursiveCharacterTextSplitter
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=512, chunk_overlap=0)
+    jira_source_chunks = text_splitter.split_documents(documents)
+
+    # Create the FAISS vector database for Jira data
+    jira_db_file_name = './Db/DB_Jira'
+    jira_db = tls.create_db(jira_source_chunks, tls.embeddings, jira_db_file_name)
 
