@@ -12,3 +12,8 @@
 2024-09-20T08:21:04.393272+0300 DEBUG file_name = ./Dataset/moon_flight_system_data_10k.json
 2024-09-20T08:21:04.639495+0300 DEBUG Synthetic data saved to ./Dataset/moon_flight_system_data_10k.json
 2024-09-20T08:21:04.639495+0300 DEBUG 01_SyntheticDataGeneration_Confluence elapsed_time = 22.553967714309692 sec
+2024-09-20T08:43:24.177404+0300 DEBUG 01_SyntheticDataGeneration_Confluence............
+2024-09-20T08:43:31.773229+0300 DEBUG data_count = 10000
+2024-09-20T08:43:56.462274+0300 DEBUG file_name = ./Dataset/moon_flight_system_data_10k.json
+2024-09-20T08:43:56.619416+0300 DEBUG Synthetic data saved to ./Dataset/moon_flight_system_data_10k.json
+2024-09-20T08:43:56.619416+0300 DEBUG 01_SyntheticDataGeneration_Confluence elapsed_time = 32.441011905670166 sec

@@ -8,3 +8,9 @@ GenAI-Powered Knowledge Management System
 complete with metadata and descriptions, and save them to the specified JSON file.
 
 The data is dedicated to the description of a fictitious software product called "Moon Flight System".
+
+### 0.2 Generates synthetic data in CSV format to emulate Jira data.
+
+02_SyntheticDataGeneration_Jira.py script uses the Faker library to generate realistic random data for various fields.
+
+The data contains Jira ticket information for a fictitious software product called "Moon Flight System".

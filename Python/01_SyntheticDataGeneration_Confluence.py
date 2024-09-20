@@ -40,7 +40,7 @@ def generate_synthetic_data(count):
     return data
 
 def save_to_file(data, filename):
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4)
 
 if __name__ == "__main__":

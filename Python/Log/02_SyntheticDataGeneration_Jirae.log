@@ -1,0 +1,8 @@
+2024-09-20T08:37:39.730235+0300 DEBUG 02_SyntheticDataGeneration_Jira............
+2024-09-20T08:37:47.439454+0300 DEBUG number_of_tickets =10000
+2024-09-20T08:38:11.777577+0300 DEBUG output_filename =./Dataset/jira_tickets_10k.csv
+2024-09-20T08:41:08.330254+0300 DEBUG 02_SyntheticDataGeneration_Jira............
+2024-09-20T08:41:15.287710+0300 DEBUG number_of_tickets =10000
+2024-09-20T08:42:18.080026+0300 DEBUG output_filename =./Dataset/jira_tickets_10k.csv
+2024-09-20T08:42:25.972620+0300 DEBUG Generated 10000 tickets and saved to ./Dataset/jira_tickets_10k.csv
+2024-09-20T08:42:25.973622+0300 DEBUG 01_SyntheticDataGeneration_Confluence elapsed_time = 77.6433675289154 sec
