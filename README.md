@@ -1,6 +1,21 @@
 # GAI_KMS_01
 GenAI-Powered Knowledge Management System
 
+This is a prototype of a solution like 
+Agentic RAG (Retrieval-Augmented Generation) based on LangGraph with data from Jira and Confluence
+
+Materials used:
+
+Course: **AI Agents in LangGraph** https://learn.deeplearning.ai/courses/ai-agents-in-langgraph/lesson/1/introduction
+
+Documentation: https://python.langchain.com/v0.2/docs/introduction/
+
+GitHub: https://github.com/langchain-ai/langgraph/tree/main
+
+LangGraph and RAG: https://github.com/langchain-ai/langgraph/tree/main/examples/rag
+
+Agentic RAG: https://github.com/langchain-ai/langgraph/blob/main/examples/rag/langgraph_agentic_rag.ipynb
+
 ## 0.Synthetic data generation
 
 ### 0.1. Generate synthetic data in JSON format to emulate Confluence data.
@@ -24,7 +39,6 @@ The data contains Jira ticket information for a fictitious software product call
 12_Create_Vector_Db_Confluence.py
 
 ### 2.1. Simple RAG for Jira
-RAG (Retrieval-Augmented Generation)
 
 21_RAG_Jira.py
 
