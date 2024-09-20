@@ -30,3 +30,6 @@ RAG (Retrieval-Augmented Generation)
 
 ### 2.2. Simple RAG for Confluence
 22_RAG_Confluence.py
+
+### 3.0. Agents
+30_Agents.py
