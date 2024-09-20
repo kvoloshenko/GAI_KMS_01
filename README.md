@@ -90,3 +90,8 @@ We can lay out an agentic RAG graph like this:
 * Conditional edges decide which node to visit next
 
 ![Nodes_Edges_01.png](Images%2FNodes_Edges_01.png)
+
+## Configuration
+1. In the folder "./Python" you need to create a file ".env" with the value of the OPENAI_API_KEY, example:
+
+API_KEY = 'sk-***' # Open AI API Key
