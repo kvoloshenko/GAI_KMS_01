@@ -36,7 +36,7 @@ def gpt_request(user_content, system_content):
     )
     end_time = time.time()
     elapsed_time = end_time - start_time
-    logger.debug(f'sgpt_request = {elapsed_time} sec')
+    logger.debug(f'gpt_request = {elapsed_time} sec')
     return response.choices[0].message.content
 
 # Function for Splitting documents

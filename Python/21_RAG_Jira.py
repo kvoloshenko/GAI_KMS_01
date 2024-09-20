@@ -24,7 +24,7 @@ if __name__ == "__main__":
     jira_topic = "Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name."
     jira_message_content = tls.get_message_content_ensemble(jira_topic, jira_db, jira_source_chunks, 10)
     system_content = '''You are a useful assistant.
-    You have data on the necessary tickets in Jira..'''
+    You have data on the necessary tickets in Jira.'''
     user_content = f'{jira_topic}. The data is here: {jira_message_content}'
     response = tls.gpt_request(user_content, system_content)
     logger.debug(f'response={response}')

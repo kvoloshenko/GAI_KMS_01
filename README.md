@@ -24,8 +24,9 @@ The data contains Jira ticket information for a fictitious software product call
 12_Create_Vector_Db_Confluence.py
 
 ### 2.1. Simple RAG for Jira
-21_RAG_Jira.py
-
 RAG (Retrieval-Augmented Generation)
 
+21_RAG_Jira.py
+
 ### 2.2. Simple RAG for Confluence
+22_RAG_Confluence.py
