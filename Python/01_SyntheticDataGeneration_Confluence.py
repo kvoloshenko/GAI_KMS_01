@@ -1,6 +1,7 @@
 import json
 import random
 from loguru import logger # Import logger
+import time
 
 def generate_synthetic_data(count):
     titles = [
@@ -46,6 +47,7 @@ if __name__ == "__main__":
     logger.add("Log/01_SyntheticDataGeneration_Confluence.log", format="{time} {level} {message}", level="DEBUG", rotation="100 KB",
                compression="zip")
     logger.debug('01_SyntheticDataGeneration_Confluence............')
+    start_time = time.time()
     data_count = int(input("Enter the number of synthetic data entries to generate: "))
     logger.debug(f'data_count = {data_count}')
     file_name = input("Enter the output file name (including .json extension): ")
@@ -54,3 +56,6 @@ if __name__ == "__main__":
     synthetic_data = generate_synthetic_data(data_count)
     save_to_file(synthetic_data, file_name)
     logger.debug(f"Synthetic data saved to {file_name}")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logger.debug(f'01_SyntheticDataGeneration_Confluence elapsed_time = {elapsed_time} sec')
