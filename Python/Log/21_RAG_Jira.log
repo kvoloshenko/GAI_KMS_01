@@ -1,0 +1,558 @@
+2024-09-20T15:07:57.379480+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:13:24.572847+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:14:28.216132+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:18:48.002195+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:18:48.002195+0300 DEBUG get_message_content_ensemble............
+2024-09-20T15:18:48.002195+0300 DEBUG topic=Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.
+2024-09-20T15:20:07.332614+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:20:07.333615+0300 DEBUG get_message_content_ensemble............
+2024-09-20T15:20:07.333615+0300 DEBUG topic=Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.
+2024-09-20T15:21:48.522444+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:21:48.522444+0300 DEBUG get_message_content_ensemble............
+2024-09-20T15:21:48.522444+0300 DEBUG topic=Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.
+2024-09-20T15:26:23.616069+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:26:23.617070+0300 DEBUG get_message_content_ensemble............
+2024-09-20T15:26:23.617070+0300 DEBUG topic=Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.
+2024-09-20T15:26:26.628340+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Cause toward the side seek another. Class put today know compare name. Listen
+instead hair even specific two project force.\nDebate light training short ready
+there." ] }, { "Summary": "Garden smile me major.", "Ticket key": "MFS-2785",
+"Ticket id": "2785", "Ticket Type": "New Feature", "Status": "Closed", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",  
+#### 2 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1895", "Ticket Type": "Bug", "Status": "Open", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "brenda68", "Project description": "Moon Flight System software
+project", "Project url": "http://williams.com/", "Priority": "Medium",
+"Resolution": "Won't Fix", "Assignee": "brenda68", "Reporter": "tcooper",
+"Creator": "qtate",  
+#### 3 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"label4", "", "label4", "Than and soon century show save. Last man and too
+account quickly.\nGroup toward wide game test theory. Nor network want. National
+need base scientist." ] }, { "Summary": "Mr generation much.", "Ticket key":
+"MFS-6477", "Ticket id": "6477", "Ticket Type": "New Feature", "Status": "In
+Progress", "Project key": "MFS", "Project name": "Moon Flight System",  
+#### 4 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1464", "Ticket Type": "Bug", "Status": "Open", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "claytonmichael", "Project description": "Moon Flight System
+software project", "Project url": "http://www.schaefer.com/", "Priority":
+"Critical", "Resolution": "Incomplete", "Assignee": "claytonmichael",
+"Reporter": "jonesjennifer",  
+#### 5 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Listen every mean light road little. Training conference sometimes she team
+visit.\nFather arrive pattern.\nEconomy inside need computer. Ball rise
+development laugh direction. Give great ago about." ] }, { "Summary": "Shoulder
+tonight paper somebody.", "Ticket key": "MFS-2639", "Ticket id": "2639", "Ticket
+Type": "Task", "Status": "Reopened", "Project key": "MFS", "Project name": "Moon
+Flight System",  
+#### 6 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "4191", "Ticket Type": "Improvement", "Status": "In Progress",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software", "Project lead": "nchang", "Project description": "Moon Flight System
+software project", "Project url": "http://www.long-green.com/", "Priority":
+"High", "Resolution": "Duplicate", "Assignee": "nchang", "Reporter":
+"davidyoung",  
+#### 7 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Including letter development today face. Personal me wrong bed you look rather
+despite.\nPeace wait about name. Direction run here rise prepare them source.
+Little factor send form education affect." ] }, { "Summary": "Lead able sound.",
+"Ticket key": "MFS-8886", "Ticket id": "8886", "Ticket Type": "Task", "Status":
+"Open", "Project key": "MFS", "Project name": "Moon Flight System", "Project
+type": "software",  
+#### 8 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "5257", "Ticket Type": "Improvement", "Status": "Open", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "yatesmelissa", "Project description": "Moon Flight System
+software project", "Project url": "http://smith-ruiz.com/", "Priority": "Low",
+"Resolution": "Fixed", "Assignee": "yatesmelissa", "Reporter": "samantha16",  
+#### 9 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Reflect evidence leg also study cold. Evening character home away detail about
+very at.\nDemocratic wonder need mean. Give age can course." ] }, { "Summary":
+"Beautiful movie consider loss fine president.", "Ticket key": "MFS-4081",
+"Ticket id": "4081", "Ticket Type": "Task", "Status": "In Progress", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",  
+#### 10 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket key": "MFS-1309", "Ticket id": "1309", "Ticket Type": "Bug", "Status":
+"In Progress", "Project key": "MFS", "Project name": "Moon Flight System",
+"Project type": "software", "Project lead": "jeremycooper", "Project
+description": "Moon Flight System software project", "Project url":
+"https://www.greer-perez.com/", "Priority": "High", "Resolution": "Won't Fix",
+"Assignee": "jeremycooper",  
+#### 11 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Component/s": "Integration", "Due Date": "2023-12-24 20:01:16", "Votes": "5",
+"Labels": "label1", "Description": "Listen every mean light road little.
+Training conference sometimes she team visit.\nFather arrive pattern.\nEconomy
+inside need computer. Ball rise development laugh direction. Give great ago
+about.", "Environment": "Set space leader find enjoy.", "Watchers":
+"gregorypearson", "Log Work": "", "Original Estimate": "",  
+#### 12 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "3509", "Ticket Type": "Improvement", "Status": "In Progress",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software", "Project lead": "jennifer74", "Project description": "Moon Flight
+System software project", "Project url": "http://www.rivera.org/", "Priority":
+"Critical", "Resolution": "Won't Fix", "Assignee": "jennifer74", "Reporter":
+"angelawalker",  
+#### 13 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Component/s": "UI", "Due Date": "2023-11-25 16:39:50", "Votes": "8", "Labels":
+"label2", "Description": "Reflect evidence leg also study cold. Evening
+character home away detail about very at.\nDemocratic wonder need mean. Give age
+can course.", "Environment": "Movie system smile administration.", "Watchers":
+"michael69", "Log Work": "", "Original Estimate": "", "Remaining Estimate": "",
+"Time Spent": "",  
+#### 14 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "7903", "Ticket Type": "Improvement", "Status": "Open", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "ramosfrancis", "Project description": "Moon Flight System
+software project", "Project url": "https://williams-dickson.com/", "Priority":
+"Low", "Resolution": "Won't Fix", "Assignee": "ramosfrancis", "Reporter":
+"thompsondouglas",  
+#### 15 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Last Viewed": "", "Resolved": "", "Affects Version/s": "label1", "Fix
+Version/s": "label3", "Component/s": "Integration", "Due Date": "2023-12-18
+15:39:30", "Votes": "0", "Labels": "label1", "Description": "Than and soon
+century show save. Last man and too account quickly.\nGroup toward wide game
+test theory. Nor network want. National need base scientist.", "Environment":
+"Form full both yeah trouble hear use.",  
+#### 16 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "7240", "Ticket Type": "New Feature", "Status": "Closed", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "ashley41", "Project description": "Moon Flight System software
+project", "Project url": "http://www.wallace-vaughn.com/", "Priority": "High",
+"Resolution": "Duplicate", "Assignee": "ashley41", "Reporter": "mike28",  
+#### 17 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ask reach capital wide field exactly cover. Give deal reason TV yeah.\nPractice
+crime relate author need top. Line production nor chance. Administration must
+usually science you." ] }, { "Summary": "Response for receive.", "Ticket key":
+"MFS-6126", "Ticket id": "6126", "Ticket Type": "Task", "Status": "Closed",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software",  
+#### 18 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1446", "Ticket Type": "Bug", "Status": "In Progress", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "alicia37", "Project description": "Moon Flight System software
+project", "Project url": "http://howell.com/", "Priority": "Low", "Resolution":
+"Duplicate", "Assignee": "alicia37", "Reporter": "larsenwayne",  
+#### 19 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"label4", "Course air instead hold. Project way force. Price product others
+usually fish include.\nWould lose nice stock. Fill respond mother quite right
+piece.\nIt remember read." ] }, { "Summary": "Than kitchen art need top ahead
+beautiful Congress.", "Ticket key": "MFS-8223", "Ticket id": "8223", "Ticket
+Type": "Task", "Status": "Closed", "Project key": "MFS", "Project name": "Moon
+Flight System",  
+#### 20 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "5796", "Ticket Type": "Bug", "Status": "Closed", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "kenneth33", "Project description": "Moon Flight System software
+project", "Project url": "http://www.olson.com/", "Priority": "Critical",
+"Resolution": "Incomplete", "Assignee": "kenneth33", "Reporter": "emilymoore",
+
+2024-09-20T15:26:26.634406+0300 DEBUG get_message_content_ensemble elapsed_time = 3.017336368560791 sec
+2024-09-20T15:35:19.960792+0300 DEBUG 21_RAG_Jira............
+2024-09-20T15:35:19.960792+0300 DEBUG get_message_content_ensemble............
+2024-09-20T15:35:19.960792+0300 DEBUG topic=Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.
+2024-09-20T15:35:22.952088+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Cause toward the side seek another. Class put today know compare name. Listen
+instead hair even specific two project force.\nDebate light training short ready
+there." ] }, { "Summary": "Garden smile me major.", "Ticket key": "MFS-2785",
+"Ticket id": "2785", "Ticket Type": "New Feature", "Status": "Closed", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",  
+#### 2 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1895", "Ticket Type": "Bug", "Status": "Open", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "brenda68", "Project description": "Moon Flight System software
+project", "Project url": "http://williams.com/", "Priority": "Medium",
+"Resolution": "Won't Fix", "Assignee": "brenda68", "Reporter": "tcooper",
+"Creator": "qtate",  
+#### 3 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"label4", "", "label4", "Than and soon century show save. Last man and too
+account quickly.\nGroup toward wide game test theory. Nor network want. National
+need base scientist." ] }, { "Summary": "Mr generation much.", "Ticket key":
+"MFS-6477", "Ticket id": "6477", "Ticket Type": "New Feature", "Status": "In
+Progress", "Project key": "MFS", "Project name": "Moon Flight System",  
+#### 4 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1464", "Ticket Type": "Bug", "Status": "Open", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "claytonmichael", "Project description": "Moon Flight System
+software project", "Project url": "http://www.schaefer.com/", "Priority":
+"Critical", "Resolution": "Incomplete", "Assignee": "claytonmichael",
+"Reporter": "jonesjennifer",  
+#### 5 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Listen every mean light road little. Training conference sometimes she team
+visit.\nFather arrive pattern.\nEconomy inside need computer. Ball rise
+development laugh direction. Give great ago about." ] }, { "Summary": "Shoulder
+tonight paper somebody.", "Ticket key": "MFS-2639", "Ticket id": "2639", "Ticket
+Type": "Task", "Status": "Reopened", "Project key": "MFS", "Project name": "Moon
+Flight System",  
+#### 6 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "4191", "Ticket Type": "Improvement", "Status": "In Progress",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software", "Project lead": "nchang", "Project description": "Moon Flight System
+software project", "Project url": "http://www.long-green.com/", "Priority":
+"High", "Resolution": "Duplicate", "Assignee": "nchang", "Reporter":
+"davidyoung",  
+#### 7 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Including letter development today face. Personal me wrong bed you look rather
+despite.\nPeace wait about name. Direction run here rise prepare them source.
+Little factor send form education affect." ] }, { "Summary": "Lead able sound.",
+"Ticket key": "MFS-8886", "Ticket id": "8886", "Ticket Type": "Task", "Status":
+"Open", "Project key": "MFS", "Project name": "Moon Flight System", "Project
+type": "software",  
+#### 8 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "5257", "Ticket Type": "Improvement", "Status": "Open", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "yatesmelissa", "Project description": "Moon Flight System
+software project", "Project url": "http://smith-ruiz.com/", "Priority": "Low",
+"Resolution": "Fixed", "Assignee": "yatesmelissa", "Reporter": "samantha16",  
+#### 9 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Reflect evidence leg also study cold. Evening character home away detail about
+very at.\nDemocratic wonder need mean. Give age can course." ] }, { "Summary":
+"Beautiful movie consider loss fine president.", "Ticket key": "MFS-4081",
+"Ticket id": "4081", "Ticket Type": "Task", "Status": "In Progress", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",  
+#### 10 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket key": "MFS-1309", "Ticket id": "1309", "Ticket Type": "Bug", "Status":
+"In Progress", "Project key": "MFS", "Project name": "Moon Flight System",
+"Project type": "software", "Project lead": "jeremycooper", "Project
+description": "Moon Flight System software project", "Project url":
+"https://www.greer-perez.com/", "Priority": "High", "Resolution": "Won't Fix",
+"Assignee": "jeremycooper",  
+#### 11 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Component/s": "Integration", "Due Date": "2023-12-24 20:01:16", "Votes": "5",
+"Labels": "label1", "Description": "Listen every mean light road little.
+Training conference sometimes she team visit.\nFather arrive pattern.\nEconomy
+inside need computer. Ball rise development laugh direction. Give great ago
+about.", "Environment": "Set space leader find enjoy.", "Watchers":
+"gregorypearson", "Log Work": "", "Original Estimate": "",  
+#### 12 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "3509", "Ticket Type": "Improvement", "Status": "In Progress",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software", "Project lead": "jennifer74", "Project description": "Moon Flight
+System software project", "Project url": "http://www.rivera.org/", "Priority":
+"Critical", "Resolution": "Won't Fix", "Assignee": "jennifer74", "Reporter":
+"angelawalker",  
+#### 13 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Component/s": "UI", "Due Date": "2023-11-25 16:39:50", "Votes": "8", "Labels":
+"label2", "Description": "Reflect evidence leg also study cold. Evening
+character home away detail about very at.\nDemocratic wonder need mean. Give age
+can course.", "Environment": "Movie system smile administration.", "Watchers":
+"michael69", "Log Work": "", "Original Estimate": "", "Remaining Estimate": "",
+"Time Spent": "",  
+#### 14 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "7903", "Ticket Type": "Improvement", "Status": "Open", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "ramosfrancis", "Project description": "Moon Flight System
+software project", "Project url": "https://williams-dickson.com/", "Priority":
+"Low", "Resolution": "Won't Fix", "Assignee": "ramosfrancis", "Reporter":
+"thompsondouglas",  
+#### 15 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Last Viewed": "", "Resolved": "", "Affects Version/s": "label1", "Fix
+Version/s": "label3", "Component/s": "Integration", "Due Date": "2023-12-18
+15:39:30", "Votes": "0", "Labels": "label1", "Description": "Than and soon
+century show save. Last man and too account quickly.\nGroup toward wide game
+test theory. Nor network want. National need base scientist.", "Environment":
+"Form full both yeah trouble hear use.",  
+#### 16 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "7240", "Ticket Type": "New Feature", "Status": "Closed", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "ashley41", "Project description": "Moon Flight System software
+project", "Project url": "http://www.wallace-vaughn.com/", "Priority": "High",
+"Resolution": "Duplicate", "Assignee": "ashley41", "Reporter": "mike28",  
+#### 17 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ask reach capital wide field exactly cover. Give deal reason TV yeah.\nPractice
+crime relate author need top. Line production nor chance. Administration must
+usually science you." ] }, { "Summary": "Response for receive.", "Ticket key":
+"MFS-6126", "Ticket id": "6126", "Ticket Type": "Task", "Status": "Closed",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software",  
+#### 18 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1446", "Ticket Type": "Bug", "Status": "In Progress", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "alicia37", "Project description": "Moon Flight System software
+project", "Project url": "http://howell.com/", "Priority": "Low", "Resolution":
+"Duplicate", "Assignee": "alicia37", "Reporter": "larsenwayne",  
+#### 19 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"label4", "Course air instead hold. Project way force. Price product others
+usually fish include.\nWould lose nice stock. Fill respond mother quite right
+piece.\nIt remember read." ] }, { "Summary": "Than kitchen art need top ahead
+beautiful Congress.", "Ticket key": "MFS-8223", "Ticket id": "8223", "Ticket
+Type": "Task", "Status": "Closed", "Project key": "MFS", "Project name": "Moon
+Flight System",  
+#### 20 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "5796", "Ticket Type": "Bug", "Status": "Closed", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "kenneth33", "Project description": "Moon Flight System software
+project", "Project url": "http://www.olson.com/", "Priority": "Critical",
+"Resolution": "Incomplete", "Assignee": "kenneth33", "Reporter": "emilymoore",
+
+2024-09-20T15:35:22.962887+0300 DEBUG get_message_content_ensemble elapsed_time = 3.0020952224731445 sec
+2024-09-20T15:35:23.012231+0300 DEBUG sgpt_request............
+2024-09-20T15:35:23.012231+0300 DEBUG user_content=Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.. The data is here: 
+#### 1 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Cause toward the side seek another. Class put today know compare name. Listen
+instead hair even specific two project force.\nDebate light training short ready
+there." ] }, { "Summary": "Garden smile me major.", "Ticket key": "MFS-2785",
+"Ticket id": "2785", "Ticket Type": "New Feature", "Status": "Closed", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",  
+#### 2 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1895", "Ticket Type": "Bug", "Status": "Open", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "brenda68", "Project description": "Moon Flight System software
+project", "Project url": "http://williams.com/", "Priority": "Medium",
+"Resolution": "Won't Fix", "Assignee": "brenda68", "Reporter": "tcooper",
+"Creator": "qtate",  
+#### 3 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"label4", "", "label4", "Than and soon century show save. Last man and too
+account quickly.\nGroup toward wide game test theory. Nor network want. National
+need base scientist." ] }, { "Summary": "Mr generation much.", "Ticket key":
+"MFS-6477", "Ticket id": "6477", "Ticket Type": "New Feature", "Status": "In
+Progress", "Project key": "MFS", "Project name": "Moon Flight System",  
+#### 4 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1464", "Ticket Type": "Bug", "Status": "Open", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "claytonmichael", "Project description": "Moon Flight System
+software project", "Project url": "http://www.schaefer.com/", "Priority":
+"Critical", "Resolution": "Incomplete", "Assignee": "claytonmichael",
+"Reporter": "jonesjennifer",  
+#### 5 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Listen every mean light road little. Training conference sometimes she team
+visit.\nFather arrive pattern.\nEconomy inside need computer. Ball rise
+development laugh direction. Give great ago about." ] }, { "Summary": "Shoulder
+tonight paper somebody.", "Ticket key": "MFS-2639", "Ticket id": "2639", "Ticket
+Type": "Task", "Status": "Reopened", "Project key": "MFS", "Project name": "Moon
+Flight System",  
+#### 6 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "4191", "Ticket Type": "Improvement", "Status": "In Progress",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software", "Project lead": "nchang", "Project description": "Moon Flight System
+software project", "Project url": "http://www.long-green.com/", "Priority":
+"High", "Resolution": "Duplicate", "Assignee": "nchang", "Reporter":
+"davidyoung",  
+#### 7 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Including letter development today face. Personal me wrong bed you look rather
+despite.\nPeace wait about name. Direction run here rise prepare them source.
+Little factor send form education affect." ] }, { "Summary": "Lead able sound.",
+"Ticket key": "MFS-8886", "Ticket id": "8886", "Ticket Type": "Task", "Status":
+"Open", "Project key": "MFS", "Project name": "Moon Flight System", "Project
+type": "software",  
+#### 8 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "5257", "Ticket Type": "Improvement", "Status": "Open", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "yatesmelissa", "Project description": "Moon Flight System
+software project", "Project url": "http://smith-ruiz.com/", "Priority": "Low",
+"Resolution": "Fixed", "Assignee": "yatesmelissa", "Reporter": "samantha16",  
+#### 9 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Reflect evidence leg also study cold. Evening character home away detail about
+very at.\nDemocratic wonder need mean. Give age can course." ] }, { "Summary":
+"Beautiful movie consider loss fine president.", "Ticket key": "MFS-4081",
+"Ticket id": "4081", "Ticket Type": "Task", "Status": "In Progress", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",  
+#### 10 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket key": "MFS-1309", "Ticket id": "1309", "Ticket Type": "Bug", "Status":
+"In Progress", "Project key": "MFS", "Project name": "Moon Flight System",
+"Project type": "software", "Project lead": "jeremycooper", "Project
+description": "Moon Flight System software project", "Project url":
+"https://www.greer-perez.com/", "Priority": "High", "Resolution": "Won't Fix",
+"Assignee": "jeremycooper",  
+#### 11 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Component/s": "Integration", "Due Date": "2023-12-24 20:01:16", "Votes": "5",
+"Labels": "label1", "Description": "Listen every mean light road little.
+Training conference sometimes she team visit.\nFather arrive pattern.\nEconomy
+inside need computer. Ball rise development laugh direction. Give great ago
+about.", "Environment": "Set space leader find enjoy.", "Watchers":
+"gregorypearson", "Log Work": "", "Original Estimate": "",  
+#### 12 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "3509", "Ticket Type": "Improvement", "Status": "In Progress",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software", "Project lead": "jennifer74", "Project description": "Moon Flight
+System software project", "Project url": "http://www.rivera.org/", "Priority":
+"Critical", "Resolution": "Won't Fix", "Assignee": "jennifer74", "Reporter":
+"angelawalker",  
+#### 13 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Component/s": "UI", "Due Date": "2023-11-25 16:39:50", "Votes": "8", "Labels":
+"label2", "Description": "Reflect evidence leg also study cold. Evening
+character home away detail about very at.\nDemocratic wonder need mean. Give age
+can course.", "Environment": "Movie system smile administration.", "Watchers":
+"michael69", "Log Work": "", "Original Estimate": "", "Remaining Estimate": "",
+"Time Spent": "",  
+#### 14 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "7903", "Ticket Type": "Improvement", "Status": "Open", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "ramosfrancis", "Project description": "Moon Flight System
+software project", "Project url": "https://williams-dickson.com/", "Priority":
+"Low", "Resolution": "Won't Fix", "Assignee": "ramosfrancis", "Reporter":
+"thompsondouglas",  
+#### 15 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Last Viewed": "", "Resolved": "", "Affects Version/s": "label1", "Fix
+Version/s": "label3", "Component/s": "Integration", "Due Date": "2023-12-18
+15:39:30", "Votes": "0", "Labels": "label1", "Description": "Than and soon
+century show save. Last man and too account quickly.\nGroup toward wide game
+test theory. Nor network want. National need base scientist.", "Environment":
+"Form full both yeah trouble hear use.",  
+#### 16 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "7240", "Ticket Type": "New Feature", "Status": "Closed", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "ashley41", "Project description": "Moon Flight System software
+project", "Project url": "http://www.wallace-vaughn.com/", "Priority": "High",
+"Resolution": "Duplicate", "Assignee": "ashley41", "Reporter": "mike28",  
+#### 17 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ask reach capital wide field exactly cover. Give deal reason TV yeah.\nPractice
+crime relate author need top. Line production nor chance. Administration must
+usually science you." ] }, { "Summary": "Response for receive.", "Ticket key":
+"MFS-6126", "Ticket id": "6126", "Ticket Type": "Task", "Status": "Closed",
+"Project key": "MFS", "Project name": "Moon Flight System", "Project type":
+"software",  
+#### 18 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "1446", "Ticket Type": "Bug", "Status": "In Progress", "Project
+key": "MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "alicia37", "Project description": "Moon Flight System software
+project", "Project url": "http://howell.com/", "Priority": "Low", "Resolution":
+"Duplicate", "Assignee": "alicia37", "Reporter": "larsenwayne",  
+#### 19 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"label4", "Course air instead hold. Project way force. Price product others
+usually fish include.\nWould lose nice stock. Fill respond mother quite right
+piece.\nIt remember read." ] }, { "Summary": "Than kitchen art need top ahead
+beautiful Congress.", "Ticket key": "MFS-8223", "Ticket id": "8223", "Ticket
+Type": "Task", "Status": "Closed", "Project key": "MFS", "Project name": "Moon
+Flight System",  
+#### 20 Relevant chunk ####
+{'source': './Dataset/jira_tickets_10k.json'}
+"Ticket id": "5796", "Ticket Type": "Bug", "Status": "Closed", "Project key":
+"MFS", "Project name": "Moon Flight System", "Project type": "software",
+"Project lead": "kenneth33", "Project description": "Moon Flight System software
+project", "Project url": "http://www.olson.com/", "Priority": "Critical",
+"Resolution": "Incomplete", "Assignee": "kenneth33", "Reporter": "emilymoore",
+
+2024-09-20T15:35:23.026242+0300 DEBUG ystem_content=You are a useful assistant.
+    You have data on the necessary tickets in Jira..
+2024-09-20T15:35:42.725405+0300 DEBUG sgpt_request = 19.71317410469055 sec
+2024-09-20T15:35:42.725405+0300 DEBUG response=Here are the tickets related to the Moon Flight System:
+
+1. **Ticket id:** 2785
+   - **Summary:** Garden smile me major.
+   - **Project name:** Moon Flight System
+   
+2. **Ticket id:** 1895
+   - **Summary:** [Not specified]
+   - **Project name:** Moon Flight System
+
+3. **Ticket id:** 6477
+   - **Summary:** Mr generation much.
+   - **Project name:** Moon Flight System
+
+4. **Ticket id:** 1464
+   - **Summary:** [Not specified]
+   - **Project name:** Moon Flight System
+
+5. **Ticket id:** 2639
+   - **Summary:** Shoulder tonight paper somebody.
+   - **Project name:** Moon Flight System
+
+6. **Ticket id:** 4191
+   - **Summary:** [Not specified]
+   - **Project name:** Moon Flight System
+
+7. **Ticket id:** 8886
+   - **Summary:** Lead able sound.
+   - **Project name:** Moon Flight System
+
+8. **Ticket id:** 5257
+   - **Summary:** [Not specified]
+   - **Project name:** Moon Flight System
+
+9. **Ticket id:** 4081
+   - **Summary:** Beautiful movie consider loss fine president.
+   - **Project name:** Moon Flight System
+
+10. **Ticket id:** 1309
+    - **Summary:** [Not specified]
+    - **Project name:** Moon Flight System
+
+11. **Ticket id:** 3509
+    - **Summary:** [Not specified]
+    - **Project name:** Moon Flight System
+
+12. **Ticket id:** 7903
+    - **Summary:** [Not specified]
+    - **Project name:** Moon Flight System
+
+13. **Ticket id:** 7240
+    - **Summary:** [Not specified]
+    - **Project name:** Moon Flight System
+
+14. **Ticket id:** 6126
+    - **Summary:** Response for receive.
+    - **Project name:** Moon Flight System
+
+15. **Ticket id:** 1446
+    - **Summary:** [Not specified]
+    - **Project name:** Moon Flight System
+
+16. **Ticket id:** 8223
+    - **Summary:** Than kitchen art need top ahead beautiful Congress.
+    - **Project name:** Moon Flight System
+
+17. **Ticket id:** 5796
+    - **Summary:** [Not specified]
+    - **Project name:** Moon Flight System
