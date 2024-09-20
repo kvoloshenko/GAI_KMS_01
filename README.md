@@ -1,5 +1,5 @@
-# GAI_KMS_01
-GenAI-Powered Knowledge Management System
+# GenAI-Powered Knowledge Management System 
+(GAI_KMS_01)
 
 This is a prototype of a solution like 
 Agentic RAG (Retrieval-Augmented Generation) based on LangGraph with data from Jira and Confluence
