@@ -1,6 +1,7 @@
 # Importing necessary libraries and modules
 import re
 import AI_Tools as tls
+import time
 from loguru import logger # Import logger
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -30,6 +31,7 @@ if __name__ == "__main__":
     logger.add("Log/21_RAG_Jira.log", format="{time} {level} {message}", level="DEBUG", rotation="100 KB",
                compression="zip")
     logger.debug('21_RAG_Jira............')
+    start_time = time.time()
 
     # Define the topic for query, which is about installing the moon flight system
     jira_topic = "Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name."
@@ -48,3 +50,6 @@ if __name__ == "__main__":
     response = tls.gpt_request(user_content, system_content)
     # Log the generated response
     logger.debug(f'response={response}')
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logger.debug(f'21_RAG_Jira elapsed_time = {elapsed_time} sec')
