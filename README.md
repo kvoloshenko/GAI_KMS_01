@@ -50,40 +50,103 @@ Agentic RAG: https://github.com/langchain-ai/langgraph/blob/main/examples/rag/la
 
 ## 0.Synthetic data generation
 
-### 0.1. Generate synthetic data in JSON format to emulate Confluence data.
-_01_SyntheticDataGeneration_Confluence.py_ script will generate the requested number of synthetic data entries, 
+### 0.1. Generate synthetic data in JSON format to emulate Confluence data (_01_SyntheticDataGeneration_Confluence.py_)
+
+This module is designed to generate the requested number of synthetic data entries, 
 complete with metadata and descriptions, and save them to the specified JSON file.
 
 The data is dedicated to the description of a fictitious software product called "Moon Flight System".
 
-### 0.2. Generates synthetic data in CSV format to emulate Jira data.
+### 0.2. Generates synthetic data in CSV format to emulate Jira data (_02_SyntheticDataGeneration_Jira.py_)
 
-_02_SyntheticDataGeneration_Jira.py_ script uses the Faker library to generate realistic random data for various fields.
+This module uses the Faker library to generate realistic random data for various fields.
 
 The data contains Jira ticket information for a fictitious software product called "Moon Flight System".
 
-### 1.1. Creating a new Vector Knowledge Base for Jira
+### 1.1. Creating a new Vector Knowledge Base for Jira (_11_Create_Vector_Db_Jira.py_)
+This module is designed to convert a CSV file containing Jira ticket data into a JSON format, 
+splits the data into chunks, and creates a FAISS vector database for efficient retrieval. 
 
-_11_Create_Vector_Db_Jira.py_
+**Summary**
 
-### 1.2. Creating a new Vector Knowledge Base for Confluence
+1. **CSV to JSON Conversion**: Converts a specified CSV file into a JSON file for more flexible data manipulation.
+2. **Document Loading**: Loads the JSON file and processes it using the Langchain `TextLoader`.
+3. **Text Splitting**: Splits the loaded text documents into manageable chunks using Langchain's `RecursiveCharacterTextSplitter`.
+4. **Database Creation**: Creates a FAISS vector database using the processed text chunks for efficient information retrieval and storage.
 
-_12_Create_Vector_Db_Confluence.py_
+This code performs a sequence of tasks, from reading and converting CSV data to JSON, 
+to splitting the text into manageable chunks, and finally storing this data in a vector database 
+for future retrieval and processing. Each step is logged for debugging and monitoring purposes.
 
-### 2.1. Simple RAG for Jira
+### 1.2. Creating a new Vector Knowledge Base for Confluence (_12_Create_Vector_Db_Confluence.py_)
 
-_21_RAG_Jira.py_
+This Python module processes a JSON file containing Confluence data, splits the data into chunks, 
+and creates a FAISS vector database for efficient retrieval. 
 
-### 2.2. Simple RAG for Confluence
-_22_RAG_Confluence.py_
+**Summary**
+- **Logging Setup**: The script initializes a logger that writes to a file with specific settings.
+- **JSON Data Loading**: Reads Confluence data from a JSON file.
+- **Document Creation**: Transforms JSON data into `Document` objects compatible with Langchain.
+- **Chunk Splitting**: Utilizes a custom tool to split the documents into smaller chunks for better processing.
+- **Database Creation**: Creates a FAISS vector database from the document chunks for efficient data retrieval.
 
-### 3.0. Agents
+### 2.1. Simple RAG for Jira (_21_RAG_Jira.py_)
+This Python module is designed to process and retrieve specific information from a dataset of Jira tickets 
+using a vector-based knowledge system. 
 
-_30_Agents.py_ module integrates various AI tools to create an intelligent agent capable of answering queries 
+It involves loading the dataset, splitting the text for easier processing, loading an existing knowledge base, 
+and then querying that knowledge base to extract relevant information.
+
+**Summary**
+
+1. **Imports and Initial Setup**:
+    - Import necessary libraries and modules: `re`, custom module `AI_Tools` as `tls`, `logger` from `loguru` for logging, `TextLoader` and `RecursiveCharacterTextSplitter` from `Langchain`.
+
+2. **Loading Data**:
+    - Load a JSON file containing Jira ticket data using `Langchain`'s `TextLoader` with UTF-8 encoding.
+    - `json_file_path` specifies the path to the JSON file containing the Jira tickets data.
+  
+3. **Text Splitting**:
+    - Split the loaded JSON documents into smaller chunks of text for easier processing using `RecursiveCharacterTextSplitter`.
+    - The `chunk_size` is set to 512 characters and there is no overlap between chunks.
+  
+4. **Loading Knowledge Base**:
+    - Load an existing vector knowledge base of Jira data using a custom tool from `AI_Tools`.
+    - The `jira_db_file_name` specifies the file name for the vector knowledge base.
+  
+5. **Main Execution Block**:
+    - Configure the logger to log debug information to a specific file with file rotation after it reaches 100 KB and compression into zip format.
+    - Log a debug statement to indicate the start of the process.
+  
+6. **Generating Query and Response**:
+    - Define a query topic for retrieving specific Jira tickets.
+    - Use the custom tool to generate a message content based on the query topic, the loaded knowledge base, and the split text chunks.
+    - Define a system content and user content for the AI request.
+    - Send a message content request to a GPT-based system to get a formatted response and log the response.
+
+This module is useful for anyone needing to process large collections of textual data and search for specific topics or
+items within that data using vector-based retrieval techniques, particularly in the context of Jira tickets.
+
+### 2.2. Simple RAG for Confluence (_22_RAG_Confluence.py_)
+This module is designed to process a JSON dataset containing information from Confluence system, 
+split the content into manageable chunks, and interact with a vector knowledge base for 
+retrieval-augmented generation (RAG). 
+
+It integrates various tools and libraries to load the data, split it into text chunks, 
+and query a pre-existing vector database to answer user queries to the data from Confluence.
+
+#### 2.2.1. Description
+The logic of this module is similar to the Simple RAG for Jira module described above.
+
+### 3.0. Agents (_30_Agents.py_)
+
+This module integrates various AI tools to create an intelligent agent capable of answering queries 
 related to Jira tickets and Confluence documentation. 
 It leverages retrievers for fetching relevant information from pre-loaded databases, 
 linguistic models for interpreting and generating responses, 
 and a workflow graph for managing the agent's decision process.
+
+**Summary**
 
 1. **Loading Databases**:
    - Loads Jira and Confluence databases into retrievers for querying.
@@ -109,7 +172,7 @@ and a workflow graph for managing the agent's decision process.
 By integrating various AI components, this module provides an interactive agent capable of handling complex queries 
 and fetching relevant information dynamically.
 
-#### 3.0.1. Nodes and Edges
+**Nodes and Edges**
 
 We can lay out an agentic RAG graph like this:
 
@@ -118,6 +181,19 @@ We can lay out an agentic RAG graph like this:
 * Conditional edges decide which node to visit next
 
 ![Nodes_Edges_01.png](Images%2FNodes_Edges_01.png)
+
+
+## _AI_Tools.py_
+This module facilitates advanced text processing and retrieval using embeddings 
+and other natural language processing techniques. 
+It leverages various tools such as OpenAI for generating responses, FAISS for efficient vector similarity search, 
+Loguru for robust logging, and LangChain for splitting text into manageable chunks and calculating embeddings.
+
+This code covers setting up API clients, splitting text into chunks, obtaining embeddings, creating and 
+loading vector knowledge bases, and combining different retrieval methods to get the most relevant text chunks 
+based on a given topic. 
+Each function is modular and well-documented, easing the maintenance and extension of functionality.
+
 
 ## Configuration
 1. In the folder "./Python" you need to create a file ".env" with the value of the OPENAI_API_KEY, example:
