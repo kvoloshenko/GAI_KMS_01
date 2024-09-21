@@ -138,6 +138,13 @@ and query a pre-existing vector database to answer user queries to the data from
 #### 2.2.1. Description
 The logic of this module is similar to the Simple RAG for Jira module described above.
 
+### 2.4. WebSearch (_24_WebSearch.py_)
+This module performs a web search using DuckDuckGo's search engine. 
+It utilizes the `DuckDuckGoSearchRun` class from the `langchain_community.tools` package to execute the search query. 
+
+This module is suitable for scenarios where automated web search and detailed logging of the search process are required. 
+It can be used in automation tasks, data gathering, and performance analysis.
+
 ### 3.0. Agents (_30_Agents.py_)
 
 This module integrates various AI tools to create an intelligent agent capable of answering queries 
