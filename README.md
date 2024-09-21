@@ -79,9 +79,37 @@ _22_RAG_Confluence.py_
 
 ### 3.0. Agents
 
-_30_Agents.py_
+_30_Agents.py_ module integrates various AI tools to create an intelligent agent capable of answering queries 
+related to Jira tickets and Confluence documentation. 
+It leverages retrievers for fetching relevant information from pre-loaded databases, 
+linguistic models for interpreting and generating responses, 
+and a workflow graph for managing the agent's decision process.
 
-#### Nodes and Edges
+1. **Loading Databases**:
+   - Loads Jira and Confluence databases into retrievers for querying.
+
+2. **Creating Retriever Tools**:
+   - Sets up tools for querying Jira tickets and Confluence documentation.
+
+3. **Agent State Definition**:
+   - Defines the state for agent, which will include messages.
+
+4. **Graph Nodes**:
+   - **Agent**: Handles invocation of the agent model.
+   - **Retrieve**: Retrieves documents using retrievers.
+   - **Rewrite**: Rewrites queries to be more effective.
+   - **Generate**: Generates responses based on relevant documents.
+
+5. **Graph Edges**:
+   - Defines the workflow for how different nodes interact based on conditions.
+
+6. **Main Execution**:
+   - Initializes logging and demonstrates usage with sample queries.
+
+By integrating various AI components, this module provides an interactive agent capable of handling complex queries 
+and fetching relevant information dynamically.
+
+#### 3.0.1. Nodes and Edges
 
 We can lay out an agentic RAG graph like this:
 

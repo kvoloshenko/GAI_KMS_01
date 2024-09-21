@@ -1,12 +1,12 @@
 import time
-from loguru import logger # Import logger
-import AI_Tools as tls
-from langchain.tools.retriever import create_retriever_tool
-from typing import Annotated, Sequence, TypedDict
-from langchain_core.messages import BaseMessage
-from langgraph.graph.message import add_messages
+from loguru import logger                                   # Import logger for logging
+import AI_Tools as tls                                      # Import custom AI tools package
+from langchain.tools.retriever import create_retriever_tool # Import for creating retriever tools
+from typing import Annotated, Sequence, TypedDict           # Import typing utilities
+from langchain_core.messages import BaseMessage             # Import base message class
+from langgraph.graph.message import add_messages            # Import message handling for the graph
 
-# Loading an existing Vector Knowledge Base
+# Load existing Vector Knowledge Bases for Jira and Confluence
 jira_db_file_name = './Db/DB_Jira'
 jira_db = tls.load_db(jira_db_file_name, tls.embeddings)
 confluence_db_file_name = './Db/DB_Confluence'
@@ -20,7 +20,8 @@ retriever_confluence = confluence_db.as_retriever()
 jira_retriever_tool = create_retriever_tool(
     retriever_jira,
     "retrieve_jira_tickets",
-    "Search and return information about Jira tickets on Summary, Ticket key, Ticket id, Ticket Type, Status, Project key, Project name, Project type, Project lead and Project description.",
+    "Search and return information about Jira tickets on Summary, Ticket key, Ticket id, "
+    "Ticket Type, Status, Project key, Project name, Project type, Project lead and Project description.",
 )
 
 confluence_retriever_tool = create_retriever_tool(
@@ -29,10 +30,10 @@ confluence_retriever_tool = create_retriever_tool(
     "Search and return information from Confluence on products documentations.",
 )
 
-# List of tools to be used
+# List of tools available for the agent to use
 tools = [jira_retriever_tool, confluence_retriever_tool]
 
-# Define AgentState and necessary imports
+# Define AgentState type
 class AgentState(TypedDict):
     # The add_messages function defines how an update should be processed
     # Default is to replace. add_messages says "append"
@@ -63,7 +64,7 @@ def grade_documents(state) -> Literal["generate", "rewrite"]:
         str: A decision for whether the documents are relevant or not
     """
 
-    print("---CHECK RELEVANCE---")
+    logger.debug("---CHECK RELEVANCE---")
 
     # Data model
     class grade(BaseModel):
@@ -71,7 +72,7 @@ def grade_documents(state) -> Literal["generate", "rewrite"]:
 
         binary_score: str = Field(description="Relevance score 'yes' or 'no'")
 
-    # LLM
+    # Load the model and chain with the prompt
     model = ChatOpenAI(temperature=0, model="gpt-4o", streaming=True)
 
     # LLM with tool and validation
@@ -101,12 +102,12 @@ def grade_documents(state) -> Literal["generate", "rewrite"]:
     score = scored_result.binary_score
 
     if score == "yes":
-        print("---DECISION: DOCS RELEVANT---")
+        logger.debug("---DECISION: DOCS RELEVANT---")
         return "generate"
 
     else:
-        print("---DECISION: DOCS NOT RELEVANT---")
-        print(score)
+        logger.debug("---DECISION: DOCS NOT RELEVANT---")
+        logger.debug(score)
         return "rewrite"
 
 
@@ -133,7 +134,7 @@ def agent(state):
     # We return a list, because this will get added to the existing list
     return {"messages": [response]}
 
-# Function to rewrite the query
+# Function to rewrite a query for better understanding
 def rewrite(state):
     logger.debug(f'rewrite............')
     """
@@ -146,7 +147,7 @@ def rewrite(state):
         dict: The updated state with re-phrased question
     """
 
-    print("---TRANSFORM QUERY---")
+    logger.debug("---TRANSFORM QUERY---")
     messages = state["messages"]
     question = messages[0].content
 
@@ -167,7 +168,7 @@ def rewrite(state):
     response = model.invoke(msg)
     return {"messages": [response]}
 
-# Function to generate an answer
+# Function to generate an answer based on the documents
 def generate(state):
     logger.debug(f'generate............')
     """
@@ -179,7 +180,7 @@ def generate(state):
     Returns:
          dict: The updated state with re-phrased question
     """
-    print("---GENERATE---")
+    logger.debug("---GENERATE---")
     messages = state["messages"]
     question = messages[0].content
     last_message = messages[-1]
@@ -214,10 +215,10 @@ from langgraph.prebuilt import ToolNode
 workflow = StateGraph(AgentState)
 
 # Define the nodes we will cycle between
-workflow.add_node("agent", agent)  # agent
+workflow.add_node("agent", agent)        # agent
 retrieve = ToolNode([jira_retriever_tool, confluence_retriever_tool])
 workflow.add_node("retrieve", retrieve)  # retrieval
-workflow.add_node("rewrite", rewrite)  # Re-writing the question
+workflow.add_node("rewrite", rewrite)    # Re-writing the question
 workflow.add_node(
     "generate", generate
 )  # Generating a response after we know the documents are relevant
@@ -290,9 +291,9 @@ if __name__ == "__main__":
     logger.debug('30_Agents............')
     # Ask a question related to Jira to the agent
     response = ask_agent("Give me tickets related to Moon Flight System. I need Ticket id, Summary and Project name.")
-    pprint.pprint(response)
+    logger.debug(response)
 
     # Ask a question related to Confluence to the agent
     response = ask_agent("How to install Moon Flight System? Give me the main details")
-    pprint.pprint(response)
+    logger.debug(response)
 
