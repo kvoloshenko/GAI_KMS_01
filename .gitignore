@@ -164,3 +164,4 @@ cython_debug/
 /Python/Db/DB_Confluence/index.pkl
 /Python/Db/DB_Jira/index.faiss
 /Python/Db/DB_Jira/index.pkl
+/Python/Git_Kind_Doctor/
