@@ -192,3 +192,197 @@ For more detailed instructions and troubleshooting, you may refer to the followi
 - [Moon Flight System Documentation](https://moonflightsystem.com/docs/282093724)
 
 By following these steps, you should be able to successfully install Moon Flight System version 2024.1 on your machine.
+2024-09-21T18:17:59.879981+0300 DEBUG 22_RAG_Confluence............
+2024-09-21T18:17:59.879981+0300 DEBUG get_message_content_ensemble............
+2024-09-21T18:17:59.879981+0300 DEBUG topic=How to install Moon Flight System? Give me the main details.
+2024-09-21T18:18:01.378006+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'title': 'API Reference', 'id': '282087173', 'source': 'https://moonflightsystem.com/docs/282087173'}
+The system requirements for Moon Flight System release 2024.1 are described as
+follows: requires a quad-core processor, 16GB RAM, 250GB SSD, and Internet
+connectivity.  
+#### 2 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093724", "source":
+"https://moonflightsystem.com/docs/282093724" },  
+#### 3 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093790", "source":
+"https://moonflightsystem.com/docs/282093790" },  
+#### 4 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282089173", "source":
+"https://moonflightsystem.com/docs/282089173" },  
+#### 5 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282084069", "source":
+"https://moonflightsystem.com/docs/282084069" },  
+#### 6 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282084812", "source":
+"https://moonflightsystem.com/docs/282084812" },  
+#### 7 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282087980", "source":
+"https://moonflightsystem.com/docs/282087980" },  
+#### 8 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282089168", "source":
+"https://moonflightsystem.com/docs/282089168" },  
+#### 9 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093135", "source":
+"https://moonflightsystem.com/docs/282093135" },  
+#### 10 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282089160", "source":
+"https://moonflightsystem.com/docs/282089160" },  
+#### 11 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093588", "source":
+"https://moonflightsystem.com/docs/282093588" },
+
+2024-09-21T18:18:01.392782+0300 DEBUG get_message_content_ensemble elapsed_time = 1.5128002166748047 sec
+2024-09-21T18:18:01.404793+0300 DEBUG sgpt_request............
+2024-09-21T18:18:01.404793+0300 DEBUG user_content=How to install Moon Flight System? Give me the main details.. The data is here: 
+#### 1 Relevant chunk ####
+{'title': 'API Reference', 'id': '282087173', 'source': 'https://moonflightsystem.com/docs/282087173'}
+The system requirements for Moon Flight System release 2024.1 are described as
+follows: requires a quad-core processor, 16GB RAM, 250GB SSD, and Internet
+connectivity.  
+#### 2 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093724", "source":
+"https://moonflightsystem.com/docs/282093724" },  
+#### 3 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093790", "source":
+"https://moonflightsystem.com/docs/282093790" },  
+#### 4 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282089173", "source":
+"https://moonflightsystem.com/docs/282089173" },  
+#### 5 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282084069", "source":
+"https://moonflightsystem.com/docs/282084069" },  
+#### 6 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282084812", "source":
+"https://moonflightsystem.com/docs/282084812" },  
+#### 7 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282087980", "source":
+"https://moonflightsystem.com/docs/282087980" },  
+#### 8 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282089168", "source":
+"https://moonflightsystem.com/docs/282089168" },  
+#### 9 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093135", "source":
+"https://moonflightsystem.com/docs/282093135" },  
+#### 10 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282089160", "source":
+"https://moonflightsystem.com/docs/282089160" },  
+#### 11 Relevant chunk ####
+{'source': './Dataset/moon_flight_system_data_10k.json'}
+"page_content": "Installation Instructions: Unzip the MFS-2024.1.zip file, run
+the installer script with sudo privileges. Follow the prompts to complete the
+installation process." }, { "metadata": { "title": "Moon Flight System
+Documentation", "id": "282093588", "source":
+"https://moonflightsystem.com/docs/282093588" },
+
+2024-09-21T18:18:01.408286+0300 DEBUG ystem_content=You are a useful assistant.
+    You have data on the necessary docs in Confluence.
+2024-09-21T18:18:04.440443+0300 DEBUG gpt_request = 3.0356502532958984 sec
+2024-09-21T18:18:04.440443+0300 DEBUG response=### Moon Flight System Installation Guide
+
+#### System Requirements
+To install the Moon Flight System release 2024.1, ensure your hardware meets the following requirements:
+- **Processor:** Quad-core processor.
+- **Memory:** 16GB RAM.
+- **Storage:** 250GB SSD.
+- **Connectivity:** Internet connection.
+
+#### Installation Steps
+1. **Download and Unzip:**
+   - Download the `MFS-2024.1.zip` file from the official website or provided source.
+   - Unzip the `MFS-2024.1.zip` file to your desired location.
+
+2. **Run the Installer Script:**
+   - Open a terminal and navigate to the directory where you unzipped the files.
+   - Run the installer script with sudo privileges using the following command:
+     ```bash
+     sudo ./installer_script.sh
+     ```
+
+3. **Follow the Prompts:**
+   - The installer script will guide you through the installation process with on-screen prompts.
+   - Follow these prompts to complete the installation.
+
+#### Documentation Sources
+For more detailed information, you can refer to the following documentation pages:
+- [Moon Flight System Documentation - Page ID: 282093724](https://moonflightsystem.com/docs/282093724)
+- [API Reference - Page ID: 282087173](https://moonflightsystem.com/docs/282087173)
+
+Ensure you have all the required software updates and dependencies installed before starting the installation process. If you encounter any issues, refer to the official documentation or support resources.
+2024-09-21T18:18:04.440443+0300 DEBUG 22_RAG_Confluence elapsed_time = 4.56046199798584 sec

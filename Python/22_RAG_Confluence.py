@@ -1,6 +1,7 @@
 # Importing necessary libraries and modules
 import re
 import AI_Tools as tls
+import time
 from loguru import logger # Import logger
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -30,6 +31,7 @@ if __name__ == "__main__":
     logger.add("Log/22_RAG_Confluence.log", format="{time} {level} {message}", level="DEBUG", rotation="100 KB",
                compression="zip")
     logger.debug('22_RAG_Confluence............')
+    start_time = time.time()
 
     # Define the topic for query, which is about installing the moon flight system
     confluence_topic = "How to install Moon Flight System? Give me the main details."
@@ -47,3 +49,6 @@ if __name__ == "__main__":
     response = tls.gpt_request(user_content, system_content)
     # Log the generated response
     logger.debug(f'response={response}')
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logger.debug(f'22_RAG_Confluence elapsed_time = {elapsed_time} sec')
