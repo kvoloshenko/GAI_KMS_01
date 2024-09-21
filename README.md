@@ -90,6 +90,24 @@ and creates a FAISS vector database for efficient retrieval.
 - **Chunk Splitting**: Utilizes a custom tool to split the documents into smaller chunks for better processing.
 - **Database Creation**: Creates a FAISS vector database from the document chunks for efficient data retrieval.
 
+###  1.3. Creating a new Vector Knowledge Base for Git (_13_Create_Vector_Db__Git.py_)
+This Python module aims to clone a Git repository, load specific files from it, 
+split document data into manageable chunks, and create a vector-based knowledge base using 
+Natural Language Processing (NLP) tools. 
+
+**Summary**
+-  **Logging Configuration**: Sets up `loguru` to log debug information to a specified file with rotation and compression settings.
+-  **Time Tracking**: Records the start and end time of the process to compute the elapsed time.
+-  **Git Repository Cloning**: Clones a specific Git repository from GitHub to a local directory.
+-  **Document Loading**: Uses a custom `GitLoader` to load documents from the cloned repository.
+-  **Filtering**: Filters the loaded documents to include only Python files.
+-  **Document Splitting**: Splits the contents of the loaded documents into chunks using a custom function.
+-  **Vector Database Creation**: Creates a vector-based knowledge database from the document chunks using tools provided in the `AI_Tools` module.
+-  **Logging Execution Time**: Logs the time taken to execute the entire process.
+
+This process establishes a reproducible and logged method to create a vector knowledge base from a specific Git 
+repository, focusing on Python files.
+
 ### 2.1. Simple RAG for Jira (_21_RAG_Jira.py_)
 This Python module is designed to process and retrieve specific information from a dataset of Jira tickets 
 using a vector-based knowledge system. 
