@@ -241,6 +241,73 @@ We can lay out an agentic RAG graph like this:
 
 This module is similar to the _30_Agents.py_ module described above. Added capable of answering queries related to  Git.
 
+#### Overview
+This Python module is designed to facilitate intelligent document retrieval and responsive query handling using 
+a combination of local knowledge databases, Large Language Models (LLMs), and custom AI tools. 
+It connects to knowledge bases from platforms like Jira, Confluence, and Git, allowing users to input queries 
+and receive processed, relevant information in response. 
+The system is designed with a modular architecture and uses a directed graph workflow to manage the query 
+lifecycle steps.
+
+**Functionality Breakdown**
+
+1. **Imports and Dependencies**
+    - **`time`**: Used for measuring execution time.
+    - **`loguru.logger`**: For logging various activities and events in the system.
+    - **`AI_Tools as tls`**: Custom AI tools package for database loading.
+    - **`langchain.tools.retriever.create_retriever_tool`**: Function to create retriever tools.
+    - **`Annotated, Sequence, TypedDict` from `typing`**: Utility types for type hints. 
+    - **`BaseMessage` from `langchain_core.messages`**: Base message class for handling message structures.
+    - **`add_messages` from `langgraph.graph.message`**: Function for appending messages in the workflow graph.
+
+2. **Knowledge Base Loading**
+    - Loads existing vectorized knowledge bases for Jira, Confluence, and Git using custom AI tools (`tls`).
+    - Creates retrievers for these knowledge bases to facilitate retrieval operations.
+
+3. **Tool Creation**
+    - Creates specific retriever tools for Jira, Confluence, and Git, each with pre-defined information to fetch 
+(e.g., Jira tickets, Confluence documentation, Git source code).
+
+4. **Agent State Definition**
+    - Defines the `AgentState` type using `TypedDict` for structuring the state which includes a sequence of messages.
+
+5. **Relevance Grading**
+    - Defines the logic to grade the retrieved documents' relevance to the user query using an LLM (GPT-4).
+    - Uses a predefined prompt to instruct the model on relevance assessment.
+
+6. **Agent Invocation**
+    - Handles logic for agent actions which include deciding on retrieval, generating responses, or ending 
+interactions based on the query and state.
+
+7. **Query Rewriting**
+    - Transforms the user query to a semantically improved version for better understanding and processing by the LLM.
+
+8. **Response Generation**
+    - Generates a final response based on the relevant documents and the refined query using an LLM.
+
+9. **Graph-based Workflow Management**
+    - Uses a state graph workflow to manage the cycle between nodes including agent decisions, document retrieval, 
+query rewriting, and response generation.
+
+10. **Main Execution and Query Interface**
+    - Provides a function `ask_agent(question)` to allow users to input questions and interact with the system.
+    - Measures performance and logs the response time for each query.
+    - Main block to initialize the logging setup and test the system with sample queries.
+
+**Usage**
+This module allows users to interact with complex knowledge bases through simple queries. It integrates document 
+retrieval with LLMs to provide coherent and relevant responses. 
+The graph workflow logic ensures that the process is streamlined and maintains a clear state through different stages 
+of query handling.
+
+**Example Usages**
+- Asking for specific Jira ticket details.
+- Requesting documentation from Confluence.
+- Finding specific lines or files within a repository on Git.
+
+The thoughtful combination of knowledge bases, AI-driven tools, and a well-structured state graph makes this module 
+suitable for environments needing intelligent document retrieval and query resolution.
+
 ### _AI_Tools.py_
 This module facilitates advanced text processing and retrieval using embeddings 
 and other natural language processing techniques. 
