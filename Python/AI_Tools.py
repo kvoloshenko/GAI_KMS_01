@@ -26,7 +26,7 @@ def gpt_request(user_content, system_content):
     logger.debug('sgpt_request............')
     start_time = time.time()
     logger.debug(f'user_content={user_content}')
-    logger.debug(f'ystem_content={system_content}')
+    logger.debug(f'system_content={system_content}')
     response = client.chat.completions.create(
     model=LL_MODEL,
     messages=[

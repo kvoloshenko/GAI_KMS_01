@@ -1,0 +1,769 @@
+2024-09-22T09:49:10.624034+0300 DEBUG 23_RAG_Git............
+2024-09-22T09:49:44.927741+0300 DEBUG 23_RAG_Git............
+2024-09-22T09:49:44.927741+0300 DEBUG 23_RAG_Git elapsed_time = 0.0 sec
+2024-09-22T09:55:14.272737+0300 DEBUG 23_RAG_Git............
+2024-09-22T09:56:09.031738+0300 DEBUG 23_RAG_Git............
+2024-09-22T09:58:35.453279+0300 DEBUG 23_RAG_Git............
+2024-09-22T09:58:36.623647+0300 DEBUG 7
+2024-09-22T09:58:36.624647+0300 DEBUG ['Python\\chat_history_01.py', 'Python\\config.py', 'Python\\db_tools_01.py', 'Python\\gpt_funcation_doctor_01.py', 'Python\\main.py', 'Python\\tgbot_gpt_01.py', 'Python\\tools_01.py']
+2024-09-22T09:58:36.624647+0300 DEBUG split_documents............
+2024-09-22T09:58:36.627649+0300 DEBUG <class 'list'>
+2024-09-22T09:58:36.627649+0300 DEBUG 64
+2024-09-22T09:58:36.627649+0300 DEBUG {'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+2024-09-22T09:58:36.627649+0300 DEBUG split_documents elapsed_time = 0.003002166748046875 sec
+2024-09-22T09:58:36.627649+0300 DEBUG create_db............
+2024-09-22T09:58:38.453173+0300 DEBUG create_db elapsed_time = 1.825524091720581 sec
+2024-09-22T09:58:38.453173+0300 DEBUG get_message_content_ensemble............
+2024-09-22T09:58:38.453173+0300 DEBUG topic=Getting the prompt file name
+2024-09-22T09:58:39.101511+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T09:58:39.101524+0300 DEBUG get_message_content_ensemble elapsed_time = 0.6483502388000488 sec
+2024-09-22T09:58:39.102035+0300 DEBUG 23_RAG_Git elapsed_time = 3.6487560272216797 sec
+2024-09-22T10:03:37.803786+0300 DEBUG 23_RAG_Git............
+2024-09-22T10:03:38.973696+0300 DEBUG 7
+2024-09-22T10:03:38.973696+0300 DEBUG ['Python\\chat_history_01.py', 'Python\\config.py', 'Python\\db_tools_01.py', 'Python\\gpt_funcation_doctor_01.py', 'Python\\main.py', 'Python\\tgbot_gpt_01.py', 'Python\\tools_01.py']
+2024-09-22T10:03:38.973696+0300 DEBUG split_documents............
+2024-09-22T10:03:38.976698+0300 DEBUG <class 'list'>
+2024-09-22T10:03:38.976698+0300 DEBUG 64
+2024-09-22T10:03:38.976698+0300 DEBUG {'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+2024-09-22T10:03:38.977698+0300 DEBUG split_documents elapsed_time = 0.003002166748046875 sec
+2024-09-22T10:03:38.977698+0300 DEBUG create_db............
+2024-09-22T10:03:40.704690+0300 DEBUG create_db elapsed_time = 1.726991891860962 sec
+2024-09-22T10:03:40.705203+0300 DEBUG get_message_content_ensemble............
+2024-09-22T10:03:40.705203+0300 DEBUG topic=Getting the prompt file name
+2024-09-22T10:03:41.422684+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:03:41.422684+0300 DEBUG get_message_content_ensemble elapsed_time = 0.7174813747406006 sec
+2024-09-22T10:03:41.423698+0300 DEBUG sgpt_request............
+2024-09-22T10:03:41.428023+0300 DEBUG user_content=Getting the prompt file name. The data is here: 
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:03:41.428023+0300 DEBUG ystem_content=You are a useful assistant.
+    You have the source code from Git.
+2024-09-22T10:03:48.133188+0300 DEBUG gpt_request = 6.705165147781372 sec
+2024-09-22T10:03:48.133188+0300 DEBUG response=To find the function responsible for getting the prompt file name, we can analyze the relevant chunks of code provided. Below is the precise function we are looking for:
+
+#### 1. Initial Context from Relevant Chunks:
+- Chunk 1 from `db_tools_01.py`: Presents part of the function `get_prompt_file_name` and `get_knowledge_base_file_name`.
+- Chunk 2 from `gpt_funcation_doctor_01.py`: Shows usage of the `get_prompt_file_name` function.
+- Chunk 5 from `db_tools_01.py`: Offers another part of the `get_prompt_file_name` function.
+
+#### Relevant Function Extracted:
+From the provided code snippets, here is the full function definition for `get_prompt_file_name`:
+
+```python
+def get_prompt_file_name(ba, db_dir_name):
+    """ Getting the prompt file name
+    
+    @param ba: Billing account name
+    @return: The prompt file name
+    """
+    db_file_name = db_dir_name + 'prompt_' + ba + '.txt'
+    return db_file_name
+```
+
+This function is located in the file `Python\\db_tools_01.py`. This function concatenates the directory name (`db_dir_name`), a constant string ('prompt_'), and the billing account name parameter (`ba`) with a `.txt` extension to form the prompt file name.
+
+### Explanation of Function Components:
+- **Parameters**:
+  - `ba` (Billing account name): Generally, a string identifier for the billing account.
+  - `db_dir_name`: The directory name where the prompt file is located or should be located.
+
+- **Return Value**:
+  - Returns the composed string which forms the filename for the prompt file.
+
+### Example Usage:
+Given a billing account `ba` as `BA123` and directory name `db_dir_name` as `/data/db/`, calling:
+```python
+file_name = get_prompt_file_name("BA123", "/data/db/")
+```
+would return:
+```
+"/data/db/prompt_BA123.txt"
+```
+
+### Confirmation from Codebase Analysis:
+The consistent logging and function usage across different chunks ultimately confirmed the role of `get_prompt_file_name` in generating the prompt file name.
+2024-09-22T10:03:48.133710+0300 DEBUG 23_RAG_Git elapsed_time = 10.32992434501648 sec
+2024-09-22T10:07:06.965819+0300 DEBUG 23_RAG_Git............
+2024-09-22T10:07:08.140445+0300 DEBUG 7
+2024-09-22T10:07:08.140445+0300 DEBUG ['Python\\chat_history_01.py', 'Python\\config.py', 'Python\\db_tools_01.py', 'Python\\gpt_funcation_doctor_01.py', 'Python\\main.py', 'Python\\tgbot_gpt_01.py', 'Python\\tools_01.py']
+2024-09-22T10:07:08.140445+0300 DEBUG split_documents............
+2024-09-22T10:07:08.143448+0300 DEBUG <class 'list'>
+2024-09-22T10:07:08.144448+0300 DEBUG 64
+2024-09-22T10:07:08.144448+0300 DEBUG {'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+2024-09-22T10:07:08.144448+0300 DEBUG split_documents elapsed_time = 0.0030024051666259766 sec
+2024-09-22T10:07:08.144448+0300 DEBUG create_db............
+2024-09-22T10:07:10.246147+0300 DEBUG create_db elapsed_time = 2.101698398590088 sec
+2024-09-22T10:07:10.246147+0300 DEBUG get_message_content_ensemble............
+2024-09-22T10:07:10.246147+0300 DEBUG topic=I'm looking for where in the source code was defined the file name where is the prompt
+2024-09-22T10:07:10.795290+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+Creating the index db and it's db file from the text source @param
+knowledge_base_text: @param ba: @return: """ #
+logger.debug(f'knowledge_base_text={knowledge_base_text}') db_file_name =
+get_db_file_name(ba, db_dir_name) logger.debug(f'db_file_name={db_file_name}')
+source_chunks, chunk_num = get_source_chunks(knowledge_base_text, chunk_size)
+logger.debug(f'chunk_num={chunk_num}') try:  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 7 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:07:10.803429+0300 DEBUG get_message_content_ensemble elapsed_time = 0.5572819709777832 sec
+2024-09-22T10:07:10.803429+0300 DEBUG sgpt_request............
+2024-09-22T10:07:10.803429+0300 DEBUG user_content=I'm looking for where in the source code was defined the file name where is the prompt. The data is here: 
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+Creating the index db and it's db file from the text source @param
+knowledge_base_text: @param ba: @return: """ #
+logger.debug(f'knowledge_base_text={knowledge_base_text}') db_file_name =
+get_db_file_name(ba, db_dir_name) logger.debug(f'db_file_name={db_file_name}')
+source_chunks, chunk_num = get_source_chunks(knowledge_base_text, chunk_size)
+logger.debug(f'chunk_num={chunk_num}') try:  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 7 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:07:10.818695+0300 DEBUG ystem_content=You are a useful assistant.
+    You have the source code from Git.
+2024-09-22T10:07:15.328303+0300 DEBUG gpt_request = 4.524873971939087 sec
+2024-09-22T10:07:15.328303+0300 DEBUG response=Based on the provided chunks of the source code, the function `get_prompt_file_name` plays a crucial role in determining the file name where the prompt is stored. This function is located in the `Python/db_tools_01.py` file. Here's the function extracted from the relevant chunks:
+
+### Function Definition
+
+From **Chunk 1**:
+```python
+def get_prompt_file_name(ba, db_dir_name):
+    """ Getting the prompt file name
+    @param ba: Billing account name
+    @return: The prompt file name """
+    db_file_name = db_dir_name + 'prompt_' + ba + '.txt'
+    return db_file_name
+```
+
+### Usage in Another Script
+
+The `get_prompt_file_name` function is called in the `Python/gpt_funcation_doctor_01.py` file. Here is part of the code that demonstrates its usage:
+
+From **Chunk 2**:
+```python
+def get_prompt_txt(type=DATA_FILES, ba=BA, SYSTEM_DOC_URL=SYSTEM_DOC_URL):
+    """ Getting the prompt text
+    @param type:
+    @param ba:
+    @param system_doc_url:
+    @return: The prompt text """
+    prompt_file_name = dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+    logger.debug(f'prompt_file_name={prompt_file_name}')
+    if type == 'local':
+        ...
+```
+
+### Summary
+1. **Function Location**: The `get_prompt_file_name` function is defined in `Python/db_tools_01.py`.
+2. **File Name Logic**:
+    - This function concatenates the `db_dir_name`, the string `'prompt_'`, the billing account name `ba`, and the extension `'.txt'` to create the file name.
+    - For example, if `db_dir_name` is `"directory/"` and the billing account name `ba` is `"account1"`, the resulting prompt file name would be `"directory/prompt_account1.txt"`.
+
+3. **Usage**: The function is used in the `get_prompt_txt` function in the `Python/gpt_funcation_doctor_01.py` file to determine the file path of the prompt text file.
+2024-09-22T10:07:15.328303+0300 DEBUG 23_RAG_Git elapsed_time = 8.361482858657837 sec
+2024-09-22T10:09:52.146322+0300 DEBUG 23_RAG_Git............
+2024-09-22T10:09:53.255407+0300 DEBUG 7
+2024-09-22T10:09:53.255407+0300 DEBUG ['Python\\chat_history_01.py', 'Python\\config.py', 'Python\\db_tools_01.py', 'Python\\gpt_funcation_doctor_01.py', 'Python\\main.py', 'Python\\tgbot_gpt_01.py', 'Python\\tools_01.py']
+2024-09-22T10:09:53.255407+0300 DEBUG split_documents............
+2024-09-22T10:09:53.261412+0300 DEBUG <class 'list'>
+2024-09-22T10:09:53.261412+0300 DEBUG 64
+2024-09-22T10:09:53.261412+0300 DEBUG {'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+2024-09-22T10:09:53.262413+0300 DEBUG split_documents elapsed_time = 0.0060040950775146484 sec
+2024-09-22T10:09:53.262413+0300 DEBUG create_db............
+2024-09-22T10:09:54.601691+0300 DEBUG create_db elapsed_time = 1.3392789363861084 sec
+2024-09-22T10:09:54.601691+0300 DEBUG get_message_content_ensemble............
+2024-09-22T10:09:54.601691+0300 DEBUG topic=I'm looking for where in the source code was defined the file name where is the prompt
+2024-09-22T10:09:55.130651+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+Creating the index db and it's db file from the text source @param
+knowledge_base_text: @param ba: @return: """ #
+logger.debug(f'knowledge_base_text={knowledge_base_text}') db_file_name =
+get_db_file_name(ba, db_dir_name) logger.debug(f'db_file_name={db_file_name}')
+source_chunks, chunk_num = get_source_chunks(knowledge_base_text, chunk_size)
+logger.debug(f'chunk_num={chunk_num}') try:  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 7 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:09:55.140915+0300 DEBUG get_message_content_ensemble elapsed_time = 0.5392234325408936 sec
+2024-09-22T10:09:55.140915+0300 DEBUG sgpt_request............
+2024-09-22T10:09:55.140915+0300 DEBUG user_content=I'm looking for where in the source code was defined the file name where is the prompt. The data is here: 
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+Creating the index db and it's db file from the text source @param
+knowledge_base_text: @param ba: @return: """ #
+logger.debug(f'knowledge_base_text={knowledge_base_text}') db_file_name =
+get_db_file_name(ba, db_dir_name) logger.debug(f'db_file_name={db_file_name}')
+source_chunks, chunk_num = get_source_chunks(knowledge_base_text, chunk_size)
+logger.debug(f'chunk_num={chunk_num}') try:  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 7 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:09:55.156853+0300 DEBUG system_content=You are a useful assistant.
+    You have the source code from Git.
+2024-09-22T10:09:58.600901+0300 DEBUG gpt_request = 3.4599790573120117 sec
+2024-09-22T10:09:58.600901+0300 DEBUG response=The file name for the prompt is defined in the function `get_prompt_file_name` within the `db_tools_01.py` file. Here is the relevant portion of the code from your provided chunks:
+
+```python
+def get_prompt_file_name(ba, db_dir_name):
+    """ Getting the prompt file name
+    @param ba: Billing account name
+    @return: The prompt file name """
+    db_file_name = db_dir_name + 'prompt_' + ba + '.txt'
+    return db_file_name
+```
+
+This function creates the prompt file name by concatenating the directory name (`db_dir_name`), a fixed string ('prompt_'), the billing account name (`ba`), and the file extension ('.txt'). The constructed file name is then returned.
+
+Additionally, in the file `gpt_funcation_doctor_01.py`, the function `get_prompt_txt` utilizes this `get_prompt_file_name` function from the `db_tools_01.py`:
+
+```python
+def get_prompt_txt(type=DATA_FILES, ba=BA, SYSTEM_DOC_URL=SYSTEM_DOC_URL):
+    """ Getting the prompt text
+    @param type:
+    @param ba:
+    @param system_doc_url:
+    @return: The prompt text """
+    prompt_file_name = dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+    logger.debug(f'prompt_file_name={prompt_file_name}')
+```
+
+Here, the `prompt_file_name` is being obtained by calling the `get_prompt_file_name` function and passing the billing account name (`ba`) and the directory name (`DB_DIR_NAME`). 
+
+To summarize, the function `get_prompt_file_name` in the `db_tools_01.py` file defines how the prompt file name is constructed. This function is utilized in the `gpt_funcation_doctor_01.py` file to get the actual prompt file name.
+2024-09-22T10:09:58.600901+0300 DEBUG 23_RAG_Git elapsed_time = 6.454578399658203 sec
+2024-09-22T10:18:41.563948+0300 DEBUG 23_RAG_Git............
+2024-09-22T10:18:41.563948+0300 DEBUG get_message_content_ensemble............
+2024-09-22T10:18:41.563948+0300 DEBUG topic=I'm looking for where in the source code was defined the file name where is the prompt
+2024-09-22T10:18:42.109641+0300 DEBUG message_content=
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+Creating the index db and it's db file from the text source @param
+knowledge_base_text: @param ba: @return: """ #
+logger.debug(f'knowledge_base_text={knowledge_base_text}') db_file_name =
+get_db_file_name(ba, db_dir_name) logger.debug(f'db_file_name={db_file_name}')
+source_chunks, chunk_num = get_source_chunks(knowledge_base_text, chunk_size)
+logger.debug(f'chunk_num={chunk_num}') try:  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 7 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:18:42.113749+0300 DEBUG get_message_content_ensemble elapsed_time = 0.5498008728027344 sec
+2024-09-22T10:18:42.113749+0300 DEBUG sgpt_request............
+2024-09-22T10:18:42.114269+0300 DEBUG user_content=I'm looking for where in the source code was defined the file name where is the prompt. The data is here: 
+#### 1 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+db_file_name = db_dir_name + 'db_file_' + ba return db_file_name def
+get_knowledge_base_file_name(ba, db_dir_name): """ Getting the knowledge base
+file name @param ba: Billing account name @return: The index db file name """
+db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt' return db_file_name
+def get_prompt_file_name(ba, db_dir_name): """ Getting the prompt file name
+@param ba: Billing account name  
+#### 2 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+tls.write_to_file('user_id;user_name;question;answer', csvfilename) HISTORY = {}
+# Словарь для хранения памяти def get_prompt_txt(type=DATA_FILES, ba=BA,
+SYSTEM_DOC_URL=SYSTEM_DOC_URL): """ Getting the prompt text @param type: @param
+ba: @param system_doc_url: @return: The prompt text """ prompt_file_name =
+dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+logger.debug(f'prompt_file_name={prompt_file_name}') if type == 'local':  
+#### 3 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@return: The index db file name """ db_file_name = db_dir_name + 'prompt_' + ba
++ '.txt' return db_file_name def get_source_chunks(knowledge_base_text,
+chunk_size): """ Getting all source chunks for the text knowledge base @param
+knowledge_base_text: @param chunk_size: @return: source_chunks, chunk_num """
+source_chunks = [] splitter = CharacterTextSplitter(separator="\n",
+chunk_size=chunk_size, chunk_overlap=0)  
+#### 4 Relevant chunk ####
+{'source': 'Python\\gpt_funcation_doctor_01.py', 'file_path': 'Python\\gpt_funcation_doctor_01.py', 'file_name': 'gpt_funcation_doctor_01.py', 'file_type': '.py'}
+system = tls.load_text(prompt_file_name) return system else: system_doc_url =
+tls.get_google_url(SYSTEM_DOC_URL) system =
+tls.load_document_text(system_doc_url) # Загрузка файла с Промтом
+tls.write_to_file(system, prompt_file_name) return system # Инструкция для GPT,
+которая будет подаваться в system system = get_prompt_txt()
+logger.debug(f'system={system}') # Создание индексной базы знаний embeddings =
+OpenAIEmbeddings()  
+#### 5 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+Creating the index db and it's db file from the text source @param
+knowledge_base_text: @param ba: @return: """ #
+logger.debug(f'knowledge_base_text={knowledge_base_text}') db_file_name =
+get_db_file_name(ba, db_dir_name) logger.debug(f'db_file_name={db_file_name}')
+source_chunks, chunk_num = get_source_chunks(knowledge_base_text, chunk_size)
+logger.debug(f'chunk_num={chunk_num}') try:  
+#### 6 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+import os from langchain.text_splitter import CharacterTextSplitter from
+langchain.docstore.document import Document from
+langchain_community.vectorstores import FAISS import re from tools_01 import
+get_google_url, load_text, write_to_file, load_document_text from loguru import
+logger def get_db_file_name(ba, db_dir_name): """ Getting the index db file name
+@param ba: Billing account name @return: The index db file name """  
+#### 7 Relevant chunk ####
+{'source': 'Python\\db_tools_01.py', 'file_path': 'Python\\db_tools_01.py', 'file_name': 'db_tools_01.py', 'file_type': '.py'}
+@param knowledge_base_url: @return: The prompt text """ logger.error(f'ba
+={ba}') logger.error(f'data_files_type ={data_files_type}')
+logger.error(f'knowledge_base_url ={knowledge_base_url}')
+logger.error(f'db_dir_name ={db_dir_name}') knowledge_base_file_name =
+get_knowledge_base_file_name(ba, db_dir_name)
+logger.error(f'knowledge_base_file_name ={knowledge_base_file_name}') if
+data_files_type == 'local':
+
+2024-09-22T10:18:42.129496+0300 DEBUG system_content=You are a useful assistant.
+    You have the source code from Git.
+2024-09-22T10:18:47.606789+0300 DEBUG gpt_request = 5.4925196170806885 sec
+2024-09-22T10:18:47.606789+0300 DEBUG response=The filename where the prompt is defined can be deduced from the given source code chunks. Here's a detailed breakdown:
+
+### Key Code Snippets
+
+1. **Functions for Generating File Names in `db_tools_01.py`**
+
+    - The function `get_knowledge_base_file_name` creates a filename for the knowledge base:
+        ```python
+        def get_knowledge_base_file_name(ba, db_dir_name):
+            """ Getting the knowledge base file name
+            @param ba: Billing account name
+            @return: The index db file name """
+            db_file_name = db_dir_name + 'knowledge_base_' + ba + '.txt'
+            return db_file_name
+        ```
+    
+    - The function `get_prompt_file_name` creates a filename for the prompt:
+        ```python
+        def get_prompt_file_name(ba, db_dir_name):
+            """ Getting the prompt file name
+            @param ba: Billing account name
+            @return: The prompt file name """
+            db_file_name = db_dir_name + 'prompt_' + ba + '.txt'
+            return db_file_name
+        ```
+
+2. **Usage in `gpt_funcation_doctor_01.py`**
+
+    - The generated prompt filename is used in another file, `gpt_funcation_doctor_01.py`:
+        ```python
+        def get_prompt_txt(type, ba, SYSTEM_DOC_URL):
+            """ Getting the prompt text
+            @param type: 
+            @param ba: 
+            @param system_doc_url: @return: The prompt text """
+            prompt_file_name = dbt.get_prompt_file_name(ba, DB_DIR_NAME)
+            logger.debug(f'prompt_file_name={prompt_file_name}')
+            if type == 'local':
+                ...
+        ```
+
+### Conclusion
+
+The function `get_prompt_file_name` is defined in the `db_tools_01.py` file at:
+
+- **Path**: `Python\\db_tools_01.py`
+
+The relevant code segment is:
+```python
+def get_prompt_file_name(ba, db_dir_name):
+    """ Getting the prompt file name
+    @param ba: Billing account name
+    @return: The prompt file name """
+    db_file_name = db_dir_name + 'prompt_' + ba + '.txt'
+    return db_file_name
+```
+
+This function is responsible for defining the filename used to store the prompt, combining a directory name (`db_dir_name`), the string `'prompt_'`, the billing account name (`ba`), and the file extension `'.txt'`.
+
+The filename generated by this function is then used in the `gpt_funcation_doctor_01.py` file to load or store the prompt text.
+2024-09-22T10:18:47.607299+0300 DEBUG 23_RAG_Git elapsed_time = 6.043351411819458 sec

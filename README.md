@@ -156,6 +156,36 @@ and query a pre-existing vector database to answer user queries to the data from
 #### 2.2.1. Description
 The logic of this module is similar to the Simple RAG for Jira module described above.
 
+### 2.3. (_23_RAG_Git.py_)
+This Python module facilitates the extraction and processing of Python source files from a given Git repository. 
+The primary steps involved in this module include:
+
+1. **Initialization**:
+   - Import required libraries and custom tools.
+   - Configure a GitLoader to filter and load only Python files from a specified repository.
+
+2. **Loading and Logging**:
+   - Load these filtered documents from the repository.
+   - Log the number of documents loaded and their source file paths.
+
+3. **Document Processing**:
+   - Split the loaded documents into smaller chunks for easier processing.
+   - Load or create a vector-based knowledge database from these document chunks using custom AI tools.
+
+4. **Query and Response Generation**:
+   - Define and configure the logger for detailed logging.
+   - Define a specific query to search within the source code repository.
+   - Retrieve relevant content from the knowledge base.
+   - Generate a response to the query using GPT-based tools.
+
+5. **Logging Execution Details**:
+   - Log key details including the response and the elapsed time for the execution.
+
+This module serves as a useful tool for searching and querying specific information within a codebase, 
+leveraging AI tools to provide meaningful insights and responses.
+
+
+
 ### 2.4. WebSearch (_24_WebSearch.py_)
 This module performs a web search using DuckDuckGo's search engine. 
 It utilizes the `DuckDuckGoSearchRun` class from the `langchain_community.tools` package to execute the search query. 
