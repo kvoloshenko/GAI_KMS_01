@@ -237,8 +237,11 @@ We can lay out an agentic RAG graph like this:
 
 ![Nodes_Edges_01.png](Images%2FNodes_Edges_01.png)
 
+### 3.1. Agents (_31_Agents.py_)
 
-## _AI_Tools.py_
+This module is similar to the _30_Agents.py_ module described above. Added capable of answering queries related to  Git.
+
+### _AI_Tools.py_
 This module facilitates advanced text processing and retrieval using embeddings 
 and other natural language processing techniques. 
 It leverages various tools such as OpenAI for generating responses, FAISS for efficient vector similarity search, 

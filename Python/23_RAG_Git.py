@@ -22,7 +22,7 @@ git_source_chunks = tls.split_documents(docs)
 
 # Load the existing Vector Knowledge Base using custom tools (tls)
 git_db_file_name = './Db/Git_Kind_Doctor'
-git_db = tls.create_db(git_source_chunks, tls.embeddings, git_db_file_name)
+git_db = tls.load_db(git_db_file_name, tls.embeddings)
 
 if __name__ == "__main__":
     # Configure the logger to write logs to a file with specific settings

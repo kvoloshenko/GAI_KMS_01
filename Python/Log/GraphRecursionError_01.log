@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\_AI\GAI_KMS_01\Python\31_Agents.py", line 308, in <module>
+    response = ask_agent("How to install Moon Flight System? Give me the main details")
+  File "C:\_AI\GAI_KMS_01\Python\31_Agents.py", line 284, in ask_agent
+    for output in graph.stream(inputs):
+  File "C:\_AI\GAI_KMS_01\venv\lib\site-packages\langgraph\pregel\__init__.py", line 917, in stream
+    raise GraphRecursionError(
+langgraph.errors.GraphRecursionError: Recursion limit of 25 reachedwithout hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
